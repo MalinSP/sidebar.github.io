@@ -1,0 +1,145 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: #716040;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #272343;
+}
+
+.logo {
+  height: 50px;
+}
+.toggle-btn {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  animation: bounce 2s ease-in-out infinite;
+  color: #fffffe;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+  background: #eaddcf;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  transform: translate(-100%);
+  transition: all 0.5s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width: 675px) {
+  .sidebar {
+    width: 400px;
+  }
+}
+.sidebar-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.close-btn {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.75rem;
+  transition: all 0.3s linear;
+}
+.close-btn:hover {
+  transform: rotate(360deg);
+}
+.links a {
+  display: block;
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.social-icons {
+  display: flex;
+  padding: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+.social-icons a {
+  margin: 0 0.5rem;
+}
+.show-sidebar {
+  transform: translate(0%);
+}
